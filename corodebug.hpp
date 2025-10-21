@@ -6,8 +6,8 @@
  *
  */
 
-#ifndef INCLUDED_debug_hpp_540364bb_c1da_4b40_8b6a_9793b8589616
-#define INCLUDED_debug_hpp_540364bb_c1da_4b40_8b6a_9793b8589616
+#ifndef INCLUDED_debug_hpp_540364bb_c1da_4b40_8b6a_9793b8589616x
+#define INCLUDED_debug_hpp_540364bb_c1da_4b40_8b6a_9793b8589616x
 
 #pragma once
 
@@ -303,4 +303,4 @@ struct corostack
 } //namespace lpt
 
 
-#endif //#define INCLUDED_debug_hpp_540364bb_c1da_4b40_8b6a_9793b8589616
+#endif //#define INCLUDED_debug_hpp_540364bb_c1da_4b40_8b6a_9793b8589616x
