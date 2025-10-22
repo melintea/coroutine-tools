@@ -13,6 +13,32 @@ resume:  00007FF7F7287630 C:\...\corodebug.cpp(15732480): corodebug!spawn_task$_
 ```
 
 ```
+#include "corodebug.hpp"
+...
+
+// Inherit:
+
+struct promise_base : public lpt::coroframe<promise_base> {
+...
+
+// Call into base:
+
+auto await_suspend(std::coroutine_handle<OtherPromise_T> h_other) {
+    self.promise().on_await_suspend(h_other);
+    ...
+
+T await_resume() {
+    self.promise().on_await_resume();
+    ...
+
+// Use it:
+
+Async<int> inner_function(int i) {
+    ...
+    auto callstack = co_await lpt::corostack<Async<int>::promise_type>{};
+    std::cout << '\n' << lpt::corostack(callstack) << '\n';
+    ...
+
 ```
 
 ### Debuggers
@@ -21,8 +47,8 @@ resume:  00007FF7F7287630 C:\...\corodebug.cpp(15732480): corodebug!spawn_task$_
 - use the [natvis](corodebug.natvis) file
 
 #### clang
-- see the [doc](). YMMV.
-- as of clabg 21 no ```std::stacktrace``` support
+- YMMV. See the [doc](https://releases.llvm.org/21.1.0/tools/clang/docs/DebuggingCoroutines.html). 
+- as of clang 21 no ```std::stacktrace``` support
 
 #### gdb
 - no helping scripts. Manually walk the stack: ```info symbol <resumeAddr>```
