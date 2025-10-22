@@ -10,6 +10,13 @@ resume:  00007FF7F728D540 C:\...\corodebug.cpp(15732480): corodebug!inner_functi
 resume:  00007FF7F728F750 C:\...\corodebug.cpp(15732480): corodebug!middle_function$_ResumeCoro$1
 resume:  00007FF7F7290E10 C:\...\corodebug.cpp(15732480): corodebug!outer_function$_ResumeCoro$1
 resume:  00007FF7F7287630 C:\...\corodebug.cpp(15732480): corodebug!spawn_task$_ResumeCoro$1<int>
+
+Async Stack:
+resume:  0x4035e5 inner_function at /.../corodebug.cpp:232
+resume:  0x403f4e middle_function at /.../corodebug.cpp:255
+resume:  0x40456b outer_function at /.../corodebug.cpp:262
+resume:  0x404a8f spawn_task at /.../corodebug.cpp:223
+
 ```
 
 ```
