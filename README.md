@@ -51,7 +51,7 @@ Async<int> inner_function(int i) {
 ### Debuggers
 
 #### MSVC
-- use the [natvis](corodebug.natvis) file
+- use the [natvis](corostack.natvis) file
 
 #### clang
 - YMMV. See the [doc](https://releases.llvm.org/21.1.0/tools/clang/docs/DebuggingCoroutines.html). 
